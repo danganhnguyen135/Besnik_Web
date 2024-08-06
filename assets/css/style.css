@@ -377,7 +377,7 @@ a {
     left: 0;
     padding: 45px 22px 40px;
     border-radius: 0px 0px 12px 12px;
-    background-color:#fff;
+    background-color: #fff;
 }
 
 .stats-trend .value {
@@ -396,10 +396,42 @@ a {
     font-weight: 400;
     line-height: 1.5; /* 150% */
 }
-.stats-trend .separate{
-    height: 1px;
+.stats-trend .separate {
+    height: 1.2px;
     margin-top: 25px;
-    background: #E9E9E9;
+    background: #e9e9e9;
+}
+.stats .avatar-block {
+    margin-top: 26px;
+    flex-wrap: wrap; /*xuống hàng khi chạm giới hạn*/
+    gap: 16px 14px;
+    display: flex;
+}
+
+.stats .avatar {
+    width: 16px;
+    height: 16px;
+    margin-left: -3px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.stats .avatar:first-child {
+    margin-left: 0;
+}
+
+.stats .avatar-group {
+    display: flex;
+}
+
+.stats .avatar-1 {
+    background: #1f3bb1;
+    font-weight: 450;
+    font-size: 0.7rem;
+    letter-spacing: -0.02em;
+    color: #fff;
+    line-height: 16px;
+    text-align: center;
 }
 .stats .img-block .image {
     display: block;
@@ -439,4 +471,74 @@ a {
     font-size: 1.6rem;
     font-weight: 400;
     line-height: 1.88; /* 187.5% */
+}
+
+.stats .row-qty {
+    margin-top: 110px;
+    justify-content: space-between;
+    display: flex;
+    padding: 0 32px;
+}
+
+.stats .qty {
+    color: #000;
+    font-size: 6.4rem;
+    font-weight: 600;
+    line-height: 1; /* 100% */
+}
+
+.stats .qty-desc {
+    color: #7b8087;
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-top: 22px;
+}
+
+/* Subscription */
+.subscription {
+    margin-top: 90px;
+}
+
+.subscription .body {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 370px;
+    border-radius: 20px;
+    background: #063183;
+}
+
+.subscription .info {
+    width: 671px;
+    max-width: 100%;
+    padding: 0 80px;
+}
+
+.subscription .sub-title {
+    color: #fff;
+    font-size: 3.5rem;
+    font-weight: 600;
+    line-height: 1.5; /* 100% */
+}
+
+.subscription .desc {
+    margin-top: 15px;
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.88; /* 187.5% */
+    opacity: 0.75;
+}
+
+.subscription .btn {
+    margin-top: 20px;
+    min-width: 151px;
+    background: #fff;
+    color: #002366;
+}
+
+.subscription .image{
+    position: absolute;
+    bottom: 0;
+    right: 221px;
 }
