@@ -9,6 +9,10 @@
 html {
     font-size: 62.5%;
 }
+html,
+body {
+    scroll-behavior: smooth;
+}
 
 body {
     font-size: 1.6rem;
@@ -50,16 +54,28 @@ a {
 }
 
 /* Header */
-.header {
+.fixed-header {
     background: #e6f0ff;
-    height: 100vh;
+    padding-top: 26px;
+    position: sticky; /*giữ nguyên vị trí khi cuộn trang*/
+    top: -26px;
+    z-index: 1;
+}
+
+.hero-wrap {
+    background: #e6f0ff;
+    height: calc(100vh - 90px);
+    display: flex;
+    flex-direction: column;
     position: relative;
+    justify-content: center;
 }
 
 .navbar {
     display: flex;
     align-items: center;
-    padding-top: 38px;
+    padding: 12px 0;
+    /* padding-top: 38px; */
 }
 
 .navbar ul {
@@ -94,32 +110,30 @@ a {
     border-radius: 8px;
 }
 
-.hero {
-    margin-top: 130px;
-}
 
-.hero .info {
+
+.hero-wrap .info {
     width: 51%;
 }
 
-.hero .sub-title {
+.hero-wrap .sub-title {
     color: #687690;
 
     font-size: 1.8rem;
     font-weight: 500;
     line-height: 1.5;
-    letter-spacing: 0.018rem;
+    letter-spacing: 0.01em;
 }
 
-.hero .title {
-    margin-top: 0.8rem;
+.hero-wrap .title {
+    margin-top: 8px;
     color: #000336;
     font-size: 6.2rem;
     font-weight: 700;
     line-height: 1.19; /* 118.75% */
 }
 
-.hero .desc {
+.hero-wrap .desc {
     color: #5a6473;
     font-size: 1.8rem;
     font-weight: 400;
@@ -133,6 +147,7 @@ a {
 }
 
 .hero-img {
+    height: 580px;
     position: absolute;
     right: calc((100vw - 1110px) / 2 - 100px);
     bottom: 0;
@@ -161,10 +176,22 @@ a {
 }
 
 .clients .images {
-    margin-top: 96px;
+    margin-top: 70px;
     justify-content: space-between;
     align-items: center;
     display: flex;
+}
+
+.clients .images a {
+    display: flex;
+    align-items: center;
+    height: 90px;
+    padding: 0 42px;
+    border-radius: 12px;
+}
+
+.clients .images a:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 /* Guides */
@@ -597,6 +624,10 @@ footer .desc {
     width: 28px;
     height: 28px;
     border-radius: 3px;
+    background: #f9f9f9;
+}
+.footer .social-link + .social-link {
+    margin-left: 16px;
 }
 
 .footer .social-link:hover {
